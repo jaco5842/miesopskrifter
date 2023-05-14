@@ -1,0 +1,314 @@
+@media only screen and (max-width: 600px) {
+  table th:nth-child(2),
+  table td:nth-child(2),
+  table th:nth-child(6),
+  table td:nth-child(6) {
+    display: none;
+  }
+}
+/* checkboxes */
+.tested-icon,
+.untested-icon {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+input[name="tested"] + .tested-icon {
+  display: none;
+  color: green;
+}
+
+input[name="tested"] + .untested-icon {
+  display: inline-block;
+  color: red;
+}
+
+input[name="tested"]:checked + .tested-icon {
+  display: inline-block;
+  color: green;
+}
+
+input[name="tested"]:checked + .untested-icon {
+  display: none;
+}
+
+/* filters */
+.filter-row {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.selects-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.select-container {
+  flex: 1;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button[type="reset"] {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+/* opskrifter table */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+#logo-main {
+  max-width: 97.5%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+  #navbar-primary.navbar-default {
+    background: transparent;
+    border: none;
+  }
+  
+  #navbar-primary.navbar-default .navbar-nav {
+    display: flex;
+    justify-content: center !important;
+    width: 100;
+    text-align: center !important;
+  }
+  
+  #navbar-primary.navbar-default .navbar-nav > li {
+    display: inline-block;
+    float: none;
+    margin: 0 10px;
+  }
+  
+  #navbar-primary.navbar-default .navbar-nav > li > a {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    background-color: #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  #navbar-primary.navbar-default .navbar-nav > li > a:hover {
+    background-color: #8bc34a;
+    color: #fff;
+  }
+
+  /* Center the form on the page */
+form {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the form labels */
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style the form inputs */
+input[type=text], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the form select dropdown */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23000' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Style the form submit button */
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the form submit button on hover */
+button[type=submit]:hover {
+  background-color: #3e8e41;
+}
+
+
+.button_ny_opskrift {
+  background-color: #4CAF50;
+  color: #000;
+}
+
+.recipe-table {
+  margin: auto;
+  width: 80%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-collapse: collapse;
+}
+
+.recipe-table th,
+.recipe-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.recipe-table th {
+  text-align: left;
+  background-color: #ddd;
+  color: #000;
+}
+
+.recipe-table tr:last-child td {
+  border-bottom: none;
+}
+
+.recipe-table .btn-edit {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.recipe-table .btn-edit:hover {
+  background-color: #357a38;
+}
+
+.recipe-table .btn-delete {
+  background-color: #f44336;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.recipe-table .btn-delete:hover {
+  background-color: #b71c1c;
+}
+
+/* center the table */
+table {
+  margin: auto;
+  width: 80%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-collapse: collapse;
+}
+
+/* style the table headers */
+th {
+  text-align: left;
+  background-color: #ddd;
+  color: #000;
+  padding: 10px 15px;
+}
+
+/* style the table cells */
+td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* hide the border of the last row */
+tr:last-child td {
+  border-bottom: none;
+}
+
+form.delete-form {
+  padding: 0;
+  box-shadow: none;
+}
+
+
+form.delete-form {
+  padding: 0;
+  background: none;
+}
+
+form.delete-form button.delete-button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.filter-row {
+  margin-bottom: 50px;
+}
+.table-container {
+  overflow-x: auto;
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+}

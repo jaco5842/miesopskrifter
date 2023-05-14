@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% block content %}
+  <h1>Slettede opskrifter</h1>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Kategori</th>
+          <th>Køkken</th>
+          <th>Link</th>
+          <th>Afprøvet</th>
+          <th>Delete</th>
+        </tr>
+        <tbody>
+            {% for recipe in recipes %}
+              <tr>
+                <td>{{ recipe.title }}</td>
+                <td>{{ recipe.category }}</td>
+                <td>{{ recipe.kitchen }}</td>
+                <td><a href="{{ recipe.link }}" target="_blank">Link</a></td>
+                <td>
+                  <div class="checkbox-container">
+                    <input type="checkbox" id="testedCheckbox-{{ recipe.id }}" class="tested-checkbox" data-id="{{ recipe.id }}" {% if recipe.tested %}checked{% endif %}>
+                    <label for="testedCheckbox-{{ recipe.id }}"></label>
+                  </div>
+                </td>
+                <td>
+                  <span class="delete-icon" data-id="{{ recipe.id }}">×</span>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+    </table>
+  </div>
+{% endblock %}

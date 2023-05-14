@@ -1,0 +1,39 @@
+<div class="filter-row filter-row-search">
+  <form method="GET" action="{% url 'opskrifter' %}">
+    <div class="selects-container">
+      <div class="select-container select-container-first">
+        <div class="filter-title">Kategori</div>
+        <select name="category" id="category-filter" onchange="updateFilterPlaceholders()">
+          <option value="">All</option>
+          {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="select-container">
+        <div class="filter-title">Køkken</div>
+        <select name="kitchen" id="kitchen-filter" onchange="updateFilterPlaceholders()">
+          <option value="">All</option>
+          {% for kitchen in kitchens %}
+            <option value="{{ kitchen }}">{{ kitchen }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="select-container select-container-last">
+        <div class="filter-title">Afprøvet</div>
+        <select name="tested" id="tested-filter" onchange="updateFilterPlaceholders()">
+          <option value="">All</option>
+          <option value="True">True</option>
+          <option value="False">False</option>
+        </select>
+      </div>
+    </div>
+    <div class="search-container">
+      <input type="text" name="search" id="search-filter" placeholder="Search" value="{{ request.GET.search }}">
+    </div>
+    <div class="button-container">
+      <button type="submit">Filter</button>
+      <button type="reset" class="remove-filters-button" onclick="resetFilters()">Nulstil</button>
+    </div>
+  </form>
+</div>

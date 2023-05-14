@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<h1>Tilføj ny opskrift</h1>
+
+
+<form method="POST" action="{% url 'ny-opskrift' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form}}
+  <button type="submit" class="button_ny_opskrift">Tilføj</button>
+</form>
+
+
+{% endblock %}
